@@ -112,8 +112,8 @@
                       <div class="w-full">
                         <button
                           type="submit"
-                          id="feni_donate_btn"
                           class="btn bg-[#B4F461] text-xl font-semibold px-8 w-full"
+                          id="noakhali_donate_btn"
                         >
                           Donate Now
                         </button>
@@ -133,7 +133,9 @@
                       <span
                         class="flex items-center justify-start bg-[#F3F3F3] px-4 py-2 rounded-lg gap-1"
                         ><img src="/assets/coin.png" alt="" />
-                        <h6 class="">0 BDT</h6></span
+                        <h6 class="">
+                          <span id="total_feni_amount">0</span> BDT
+                        </h6></span
                       >
                     </div>
                     <h6 class="font-bold text-xl">
@@ -157,6 +159,7 @@
                     >
                       <div class="w-full">
                         <input
+                          id="feni_input"
                           class="border w-full rounded-lg px-4 py-4"
                           type="number"
                           placeholder="Write Donation Amount"
@@ -192,7 +195,9 @@
                       <span
                         class="flex items-center justify-start bg-[#F3F3F3] px-4 py-2 rounded-lg gap-1"
                         ><img src="/assets/coin.png" alt="" />
-                        <h6 class="">0 BDT</h6></span
+                        <h6 class="">
+                          <span id="total_quota_amount">0</span> BDT
+                        </h6></span
                       >
                     </div>
                     <h6 class="font-bold text-xl">
@@ -217,6 +222,7 @@
                     >
                       <div class="w-full">
                         <input
+                          id="quota_input"
                           class="border w-full rounded-lg px-4 py-4"
                           type="number"
                           placeholder="Write Donation Amount"
@@ -250,9 +256,9 @@
               role="tabpanel"
               class="tab-content bg-base-100 border-base-300 rounded-box p-6"
             >
-              <div class="space-y-6">
+              <div id="histories" class="space-y-6">
                 <!-- history card  -->
-                <div class="border p-6 rounded-lg space-y-2">
+                <!-- <div class="border p-6 rounded-lg space-y-2">
                   <h6 class="font-bold text-xl">
                     96500 Taka is Donated for famine-2024 at Feni, Bangladesh
                   </h6>
@@ -260,9 +266,9 @@
                     Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
                     Standard Time)
                   </p>
-                </div>
+                </div> -->
                 <!-- history card  -->
-                <div class="border p-6 rounded-lg space-y-2">
+                <!-- <div class="border p-6 rounded-lg space-y-2">
                   <h6 class="font-bold text-xl">
                     96500 Taka is Donated for famine-2024 at Feni, Bangladesh
                   </h6>
@@ -270,9 +276,9 @@
                     Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
                     Standard Time)
                   </p>
-                </div>
+                </div> -->
                 <!-- history card  -->
-                <div class="border p-6 rounded-lg space-y-2">
+                <!-- <div class="border p-6 rounded-lg space-y-2">
                   <h6 class="font-bold text-xl">
                     96500 Taka is Donated for famine-2024 at Feni, Bangladesh
                   </h6>
@@ -280,7 +286,7 @@
                     Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
                     Standard Time)
                   </p>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -289,6 +295,24 @@
     </main>
 
     <footer class="h-40 bg-[#F9F7F3]"></footer>
+
+    <!-- modal  -->
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box space-y-4">
+        <h3 class="text-3xl font-bold text-center">Congratulations!</h3>
+        <div class="flex items-center justify-center">
+          <img class="text-center" src="/assets/coin.png" alt="" />
+        </div>
+        <p class="text-center">You have donated for humankind</p>
+        <p class="text-center font-bold">Successfully</p>
+        <div class="modal-action">
+          <form method="dialog flex items-center justify-center">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn mx-auto w-full">Close confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <script src="/app.js"></script>
   </body>
