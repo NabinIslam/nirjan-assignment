@@ -61,6 +61,10 @@ noakhaliForm.addEventListener("submit", function (e) {
   historyContainer.innerHTML = historyData;
 
   noakhaliForm.reset();
+
+  const modal = document.getElementById("my_modal_2");
+
+  modal.showModal();
 });
 
 feniForm.addEventListener("submit", function (e) {
@@ -115,6 +119,10 @@ feniForm.addEventListener("submit", function (e) {
   historyContainer.innerHTML = historyData;
 
   feniForm.reset();
+
+  const modal = document.getElementById("my_modal_2");
+
+  modal.showModal();
 });
 
 quotaForm.addEventListener("submit", function (e) {
@@ -169,4 +177,8 @@ quotaForm.addEventListener("submit", function (e) {
   historyContainer.innerHTML = historyData;
 
   quotaForm.reset();
+
+  const modal = document.getElementById("my_modal_2");
+
+  modal.showModal();
 });
